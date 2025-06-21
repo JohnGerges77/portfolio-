@@ -2,7 +2,7 @@ import Link from "next/link";
 import TechIcon from "../components/TechIcon";
 import GitHub from "../assets/icons/github.svg";
 import WhatsApp from "../assets/icons/icons8-whatsapp.svg";
-import LinkedIn from "../assets/icons/icons8-linkedIn.svg";
+import LinkedIn from "../assets/icons/icons8-linkedin.svg";
 const Social = [
 
   {
