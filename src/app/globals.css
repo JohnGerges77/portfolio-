@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .nav-item {
+    @apply px-4 py-1.5 text-white/70 text-sm rounded-full font-semibold  hover:text-white transition duration-500;
+  }
+
+  .ring {
+    @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/10 shadow-[0_0_80px_rgba(16,185,129,0.05)];
+  }
+}
