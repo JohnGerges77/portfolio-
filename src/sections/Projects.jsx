@@ -21,6 +21,9 @@ const portfolioProjects = [
       { title: "Integrated secure online payment gateways." },
     ],
     link: "https://jawla-rose.vercel.app/",
+  
+    repo: "https://github.com/JohnGerges77/jawla",
+
     image: FirstProject,
   },
   {
@@ -33,10 +36,11 @@ const portfolioProjects = [
       { title: "Supabase for efficient database management." },
     ],
     link: "https://the-wild-oasis-two-flame.vercel.app/",
+     repo: "https://github.com/JohnGerges77/The_Wild_Oasis",
     image: SecondProject,
   },
   {
-   company: "Gsap Animation",
+    company: "Gsap Animation",
     year: "2024",
     title: "Arcane",
     results: [
@@ -45,6 +49,7 @@ const portfolioProjects = [
       { title: "visually rich interface with dynamic." },
     ],
     link: "https://arcane-chi.vercel.app/",
+         repo: "https://github.com/JohnGerges77/Arcane",
     image: ThirdProject,
   },
   {
@@ -56,10 +61,9 @@ const portfolioProjects = [
       { title: "Clerk authentication for secure user access" },
       { title: "Stripe for secure and real-time payment." },
     ],
-    link: "https://github.com/JohnGerges77/NextSkill",
+    repo: "https://github.com/JohnGerges77/NextSkill",
     image: FourthProject,
   },
-
 ];
 
 export const ProjectsSection = () => {
@@ -87,7 +91,7 @@ export const ProjectsSection = () => {
           <StarIcon className="size-5 text-emerald-300 absolute left-3 top-[1120px]" />
         </div>
         <div className="absolute left-[90%]">
-          <StarIcon className="size-9 text-emerald-300/20  absolute left-1 top-[500px] " />
+          <StarIcon className="size-9 text-emerald-300/20 absolute left-1 top-[500px] " />
           <StarIcon className="size-6 text-emerald-300  absolute left-5 top-[320px]" />
         </div>
         <div className="flex items-center flex-col gap-20 mt-10 md:mt-20 min-h-[300vh]">
@@ -98,7 +102,7 @@ export const ProjectsSection = () => {
             rounded-3xl  after:content-[''] after:absolute 
              after:inset-0 after:outline-2 after:outline after:-outline-offset-2
               after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16
-               lg:px-20 after:pointer-events-none lg:w-[65%] mx-4 sticky"
+               lg:px-16 after:pointer-events-none lg:w-[85%] xl:w-[70%] mx-4 sticky "
               style={{
                 top: `calc(64px + ${index * 30}px)`,
               }}
@@ -136,13 +140,34 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-
-                  <Link href={project.link}>
-                    <button className={`${project.title==='Next Skill'?'bg-gray-950 text-white':'bg-white'} text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
-                     flex justify-center items-center gap-1 mt-8 cursor-pointer`}>
-                    { project.title==='Next Skill'?'View Github Repo': 'View Live Site'} <ArrowUpRight className="size-4" />
-                    </button>
-                  </Link>
+                  <div className="flex lg:flex-row flex-col items-center  gap-5">
+                 { project.title!=='Next Skill' && <Link href={project.link}>
+                      <button
+                        className='
+                        
+                         
+                        bg-white
+                         text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
+                     flex justify-center items-center gap-1 mt-8 cursor-pointer'
+                      >
+                      
+                          
+                          View Live Site
+                        <ArrowUpRight className="size-4" />
+                      </button>
+                    </Link>}
+                    <Link href={project.repo}>
+                      <button
+                        className=" bg-gray-950 text-gray-50 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
+                     flex justify-center items-center gap-1 cursor-pointer lg:mt-8"
+                      >
+                        
+                           Github Repo
+                         
+                        <ArrowUpRight className="size-4" />
+                      </button>
+                    </Link>
+                  </div>
                 </div>
                 <div className="relative">
                   <Image

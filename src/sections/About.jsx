@@ -5,7 +5,7 @@ import SocialIcons from "@/components/SocialIcons";
 
 function AboutSection() {
   return (
-    <div className="py-16 md:px-16 lg:px-10">
+    <div className="py-16 md:px-16 lg:px-10  overflow-x-hidden" >
       <div className="flex justify-center">
         <p
           className="uppercase font-semibold tracking-widest 
