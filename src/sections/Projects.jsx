@@ -39,6 +39,18 @@ const portfolioProjects = [
      repo: "https://github.com/JohnGerges77/The_Wild_Oasis",
     image: SecondProject,
   },
+    {
+    company: "courses E-commmerce",
+    year: "2023",
+    title: "Next Skill",
+    results: [
+      { title: "Strapi for efficient database management." },
+      { title: "Clerk authentication for secure user access" },
+      { title: "Stripe for secure and real-time payment." },
+    ],
+    repo: "https://github.com/JohnGerges77/NextSkill",
+    image: FourthProject,
+  },
   {
     company: "Gsap Animation",
     year: "2024",
@@ -52,18 +64,7 @@ const portfolioProjects = [
          repo: "https://github.com/JohnGerges77/Arcane",
     image: ThirdProject,
   },
-  {
-    company: "courses E-commmerce",
-    year: "2023",
-    title: "Next Skill",
-    results: [
-      { title: "Strapi for efficient database management." },
-      { title: "Clerk authentication for secure user access" },
-      { title: "Stripe for secure and real-time payment." },
-    ],
-    repo: "https://github.com/JohnGerges77/NextSkill",
-    image: FourthProject,
-  },
+
 ];
 
 export const ProjectsSection = () => {
@@ -140,7 +141,7 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex lg:flex-row flex-col items-center  gap-5">
+                  <div className="flex lg:flex-row flex-col items-center  sm:gap-5">
                  { project.title!=='Next Skill' && <Link href={project.link}>
                       <button
                         className='
@@ -159,7 +160,7 @@ export const ProjectsSection = () => {
                     <Link href={project.repo}>
                       <button
                         className=" bg-gray-950 text-gray-50 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
-                     flex justify-center items-center gap-1 cursor-pointer lg:mt-8"
+                     flex justify-center items-center gap-1 mt-5 sm:mt-1 cursor-pointer lg:mt-8"
                       >
                         
                            Github Repo
