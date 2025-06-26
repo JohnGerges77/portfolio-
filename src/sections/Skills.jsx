@@ -155,7 +155,7 @@ export const SkillSection = () => {
         projects
       </p>
       <div className="mt-20 flex flex-col justify-center lg:items-center gap-4 ">
-        <Card className="h-[320px] lg:h-[290px] !p-0 lg:!max-w-4xl">
+        <Card className="!p-0 lg:!max-w-4xl">
           <div className="flex flex-col px-6 pt-6">
             <div className="inline-flex items-center gap-2">
               <StarIcon className="text-emerald-300 size-9" />
@@ -173,7 +173,7 @@ export const SkillSection = () => {
           />
           <ToolboxItems
             items={toolboxItems}
-            className="my-6 "
+            className="my-8"
             itemsClassName="animate-move-right [animation-duration:20s]"
           />
         </Card>
