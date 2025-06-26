@@ -173,7 +173,7 @@ export const SkillSection = () => {
           />
           <ToolboxItems
             items={toolboxItems}
-            className="mt-6 "
+            className="my-6 "
             itemsClassName="animate-move-right [animation-duration:20s]"
           />
         </Card>

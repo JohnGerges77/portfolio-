@@ -141,7 +141,7 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex lg:flex-row flex-col items-center  sm:gap-5">
+                  <div className="flex xl:flex-row flex-col items-center  sm:gap-5">
                  { project.title!=='Next Skill' && <Link href={project.link}>
                       <button
                         className='
@@ -160,7 +160,7 @@ export const ProjectsSection = () => {
                     <Link href={project.repo}>
                       <button
                         className=" bg-gray-950 text-gray-50 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
-                     flex justify-center items-center gap-1 mt-5 sm:mt-1 cursor-pointer lg:mt-8"
+                     flex justify-center items-center gap-1 mt-5 sm:mt-1 cursor-pointer lg:mt-3 xl:mt-8"
                       >
                         
                            Github Repo
