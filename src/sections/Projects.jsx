@@ -2,6 +2,7 @@ import FirstProject from "../assets/images/first project.png";
 import SecondProject from "../assets/images/second project.png";
 import ThirdProject from "../assets/images/Third Project.png";
 import FourthProject from "../assets/images/Fourth Project.png";
+import FifthProject from "../assets/images/Fifth Project.png";
 import CheckIcon from "../assets/icons/check-circle.svg";
 import SparkleIcon from "../assets/icons/sparkle.svg";
 import StarIcon from "../assets/icons/star.svg";
@@ -51,6 +52,7 @@ const portfolioProjects = [
     repo: "https://github.com/JohnGerges77/NextSkill",
     image: FourthProject,
   },
+
   {
     company: "Gsap Animation",
     year: "2024",
@@ -64,7 +66,19 @@ const portfolioProjects = [
          repo: "https://github.com/JohnGerges77/Arcane",
     image: ThirdProject,
   },
-
+    {
+    company: "AlRowad (Company Project)",
+    year: "2025",
+    title: "AlRowad IT",
+    results: [
+      { title: "GSAP and Framer Motion for smooth, high-performance user experiences" },
+      { title: "Delivered modern, responsive designs powered by Tailwind CSS" },
+      { title: "creating a visually unique interface that sets our solutions apart from competitors" },
+    ],
+    link: "https://alrowadit.com/",
+     
+    image: FifthProject,
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -157,7 +171,7 @@ export const ProjectsSection = () => {
                         <ArrowUpRight className="size-4" />
                       </button>
                     </Link>}
-                    <Link href={project.repo}>
+                 { project.title!=='AlRowad IT'&& <Link href={project.repo}>
                       <button
                         className=" bg-gray-950 text-gray-50 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
                      flex justify-center items-center gap-1 mt-5 sm:mt-1 cursor-pointer lg:mt-3 xl:mt-8"
@@ -167,7 +181,7 @@ export const ProjectsSection = () => {
                          
                         <ArrowUpRight className="size-4" />
                       </button>
-                    </Link>
+                    </Link>}
                   </div>
                 </div>
                 <div className="relative">
