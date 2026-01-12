@@ -8,6 +8,7 @@ import SparkleIcon from "../assets/icons/sparkle.svg";
 import StarIcon from "../assets/icons/star.svg";
 import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
 import GrainImage from "../assets/images/grain.jpg";
+import SixProject from "../assets/images/Six Project.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -52,20 +53,6 @@ const portfolioProjects = [
     repo: "https://github.com/JohnGerges77/NextSkill",
     image: FourthProject,
   },
-
-  {
-    company: "Gsap Animation",
-    year: "2024",
-    title: "Arcane",
-    results: [
-      { title: "GSAP for smooth, high-performance animations." },
-      { title: " Tailwind for a responsive and modern design." },
-      { title: "visually rich interface with dynamic." },
-    ],
-    link: "https://arcane-chi.vercel.app/",
-         repo: "https://github.com/JohnGerges77/Arcane",
-    image: ThirdProject,
-  },
     {
     company: "AlRowad (Company Project)",
     year: "2025",
@@ -78,6 +65,33 @@ const portfolioProjects = [
     link: "https://alrowadit.com/",
      
     image: FifthProject,
+  },
+  {
+    company: "Gsap Animation",
+    year: "2024",
+    title: "Arcane",
+    results: [
+      { title: "GSAP for smooth, high-performance animations." },
+      { title: " Tailwind for a responsive and modern design." },
+      { title: "visually rich interface." },
+    ],
+    link: "https://arcane-chi.vercel.app/",
+         repo: "https://github.com/JohnGerges77/Arcane",
+    image: ThirdProject,
+  },
+
+  {
+    company: "Games E-commerce",
+    year: "2022",
+    title: "Level Up",
+    results: [
+      { title: " Tailwind for a responsive and modern design." },
+      { title: "visually rich interface." },
+      { title: "Fast and responsive" },
+    ],
+    link: "https://level-up-two-coral.vercel.app/",
+    repo: "https://github.com/JohnGerges77/LevelUp",
+    image: SixProject,
   },
 ];
 
