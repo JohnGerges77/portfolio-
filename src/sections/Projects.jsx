@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import FirstProject from "../assets/images/first project.png";
 import SecondProject from "../assets/images/second project.png";
 import ThirdProject from "../assets/images/Third Project.png";
@@ -9,10 +12,53 @@ import StarIcon from "../assets/icons/star.svg";
 import ArrowUpRight from "../assets/icons/arrow-up-right.svg";
 import GrainImage from "../assets/images/grain.jpg";
 import SixProject from "../assets/images/Six Project.png";
+import SevenProject from "../assets/images/Seven Project.png";
+import EightProject from "../assets/images/eight Project.png";
 import Link from "next/link";
 import Image from "next/image";
 
 const portfolioProjects = [
+
+
+      {
+    company: "Meeting Platform (Company Project)",
+    year: "2026",
+    title: "Arrow meet",
+    results: [
+      { title: "Built for seamless online meetings." },
+      { title: "Real-time communication powered by WebSocket." },
+      { title: "Next.js and Tailwind CSS for a fast modern UI." },
+    ],
+    link: "https://arrowmeet.com/",
+    image: SevenProject,
+  },
+
+    {
+    company: "GSAP Animation",
+    year: "2025",
+    title: "GTA Clone",
+    results: [
+      { title: "GSAP used to make the website smooth and interactive." },
+      { title: "Fully responsive design across all screen sizes." },
+      { title: "Built with a polished modern user experience." },
+    ],
+    link: "https://gta-vi-one-gamma.vercel.app/",
+    repo: "https://github.com/JohnGerges77/GTA_Vi",
+    image: EightProject,
+  },
+
+ {
+    company: "Courses E-commmerce",
+    year: "2023",
+    title: "Next Skill",
+    results: [
+      { title: "Strapi for efficient database management." },
+      { title: "Clerk authentication for secure user access" },
+      { title: "Stripe for secure and real-time payment." },
+    ],
+    repo: "https://github.com/JohnGerges77/NextSkill",
+    image: FourthProject,
+  },
   {
     company: "Gruadation Project",
     year: "2025",
@@ -28,31 +74,7 @@ const portfolioProjects = [
 
     image: FirstProject,
   },
-  {
-    company: "hotel management system",
-    year: "2024",
-    title: "The Wild Oasis",
-    results: [
-      { title: "Next.js and Tailwind for a fast and responsive UI." },
-      { title: "Integrated Next-Auth (Google Provider)." },
-      { title: "Supabase for efficient database management." },
-    ],
-    link: "https://the-wild-oasis-two-flame.vercel.app/",
-     repo: "https://github.com/JohnGerges77/The_Wild_Oasis",
-    image: SecondProject,
-  },
-    {
-    company: "courses E-commmerce",
-    year: "2023",
-    title: "Next Skill",
-    results: [
-      { title: "Strapi for efficient database management." },
-      { title: "Clerk authentication for secure user access" },
-      { title: "Stripe for secure and real-time payment." },
-    ],
-    repo: "https://github.com/JohnGerges77/NextSkill",
-    image: FourthProject,
-  },
+
     {
     company: "AlRowad (Company Project)",
     year: "2025",
@@ -66,6 +88,22 @@ const portfolioProjects = [
      
     image: FifthProject,
   },
+  
+  {
+    company: "hotel management system",
+    year: "2024",
+    title: "The Wild Oasis",
+    results: [
+      { title: "Next.js and Tailwind for a fast and responsive UI." },
+      { title: "Integrated Next-Auth (Google Provider)." },
+      { title: "Supabase for efficient database management." },
+    ],
+    
+     repo: "https://github.com/JohnGerges77/The_Wild_Oasis",
+    image: SecondProject,
+  },
+   
+
   {
     company: "Gsap Animation",
     year: "2024",
@@ -93,9 +131,14 @@ const portfolioProjects = [
     repo: "https://github.com/JohnGerges77/LevelUp",
     image: SixProject,
   },
+
+
 ];
 
 export const ProjectsSection = () => {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const visibleProjects = showAllProjects ? portfolioProjects : portfolioProjects.slice(0, 4);
+
   return (
     <section id="projects" className="pb-16 lg:py-24">
       <div className="">
@@ -123,8 +166,8 @@ export const ProjectsSection = () => {
           <StarIcon className="size-9 text-emerald-300/20 absolute left-1 top-[500px] " />
           <StarIcon className="size-6 text-emerald-300  absolute left-5 top-[320px]" />
         </div>
-        <div className="flex items-center flex-col gap-20 mt-10 md:mt-20 min-h-[300vh]">
-          {portfolioProjects.map((project, index) => (
+        <div className="flex items-center flex-col gap-20 mt-10 md:mt-20">
+          {visibleProjects.map((project, index) => (
             <div
               key={project.title}
               className="bg-gray-800 z-0 overflow-hidden after:z-10
@@ -170,32 +213,30 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
                   <div className="flex xl:flex-row flex-col items-center  sm:gap-5">
-                 { project.title!=='Next Skill' && <Link href={project.link}>
-                      <button
-                        className='
-                        
-                         
+                    {project.link && (
+                      <Link href={project.link } target="_blank">
+                        <button
+                          className="
                         bg-white
                          text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
-                     flex justify-center items-center gap-1 mt-8 cursor-pointer'
-                      >
-                      
-                          
+                     flex justify-center items-center gap-1 mt-8 cursor-pointer"
+                        >
                           View Live Site
-                        <ArrowUpRight className="size-4" />
-                      </button>
-                    </Link>}
-                 { project.title!=='AlRowad IT'&& <Link href={project.repo}>
-                      <button
-                        className=" bg-gray-950 text-gray-50 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
+                          <ArrowUpRight className="size-4" />
+                        </button>
+                      </Link>
+                    )}
+                    {project.repo && (
+                      <Link href={project.repo} target="_blank">
+                        <button
+                          className=" bg-gray-950 text-gray-50 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
                      flex justify-center items-center gap-1 mt-5 sm:mt-1 cursor-pointer lg:mt-3 xl:mt-8"
-                      >
-                        
-                           Github Repo
-                         
-                        <ArrowUpRight className="size-4" />
-                      </button>
-                    </Link>}
+                        >
+                          Github Repo
+                          <ArrowUpRight className="size-4" />
+                        </button>
+                      </Link>
+                    )}
                   </div>
                 </div>
                 <div className="relative">
@@ -210,6 +251,22 @@ export const ProjectsSection = () => {
             </div>
           ))}
         </div>
+        {portfolioProjects.length > 4 && (
+          <div className="flex justify-center mt-10 md:mt-16">
+            <button
+              type="button"
+              onClick={() => setShowAllProjects((current) => !current)}
+              className="bg-white text-gray-950 h-12 px-6 rounded-xl font-semibold flex items-center gap-2 cursor-pointer"
+            >
+              {showAllProjects ? "Show fewer projects" : "Show more projects"}
+              <ArrowUpRight
+                className={`size-4 transition-transform ${
+                  showAllProjects ? "rotate-[-45deg]" : "rotate-45"
+                }`}
+              />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
