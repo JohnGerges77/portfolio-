@@ -19,7 +19,7 @@ function AboutSection() {
         A Glimpse Into My World
       </h2>
       <p className="text-center md:text-lg lg:text-xl  text-white/60 mt-6 max-w-md mx-auto">
-        Learn more about who I am, what I do, what inpires me.
+        Learn more about who I am, what I do, and what inspires me.
       </p>
       <div
         className="flex flex-col items-center mt-16 mx-5 font-sans text-base sm:text-lg text-gray-200 text-center leading-8 
@@ -33,7 +33,7 @@ function AboutSection() {
           className="text-base sm:text-lg md:text-xl lg:text-3xl mb-10 font-bold 
         bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text  text-transparent "
         >
-          Frontend developer React || Next.JS
+          Front-end Developer | React | Next.js
         </motion.div>
 
         <motion.div

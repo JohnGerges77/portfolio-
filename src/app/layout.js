@@ -1,23 +1,39 @@
 import "./globals.css";
+import {
+  authorName,
+  sameAsProfiles,
+  siteDescription,
+  siteKeywords,
+  siteName,
+  siteUrl,
+} from "../lib/seo";
 
 export const metadata = {
-  title: "John Gerges",
-  description: "Explore the portfolio of John Gerges, a skilled Frontend Developer specializing in React, Next.js, Tailwind CSS, and modern web technologies. Discover innovative projects, technical skills, and get in touch for collaborations.",
-  keywords: ["frontend developer", "react", "next.js", "tailwind css", "portfolio", "web development", "john gerges", "javascript", "html", "css"],
-  authors: [{ name: "John Gerges" }],
-  creator: "John Gerges",
-  publisher: "John Gerges",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "John Gerges | Front-End Developer",
+    template: "%s | John Gerges",
+  },
+  description: siteDescription,
+  keywords: siteKeywords,
+  authors: [{ name: authorName }],
+  creator: authorName,
+  publisher: authorName,
+  applicationName: siteName,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "John Gerges - Frontend Developer Portfolio",
-    description: "Explore the portfolio of John Gerges, a skilled Frontend Developer specializing in React, Next.js, Tailwind CSS, and modern web technologies.",
-    url: "https://johngerges.dev", // Replace with actual URL if available
-    siteName: "John Gerges Portfolio",
+    title: "John Gerges | Front-End Developer",
+    description: siteDescription,
+    url: siteUrl,
+    siteName,
     images: [
       {
-        url: "/memoji-avatar-1.png", // Assuming this is in public or adjust path
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "John Gerges - Frontend Developer",
+        alt: "John Gerges portfolio preview",
       },
     ],
     locale: "en_US",
@@ -25,10 +41,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Gerges - Frontend Developer Portfolio",
-    description: "Explore the portfolio of John Gerges, a skilled Frontend Developer specializing in React, Next.js, Tailwind CSS, and modern web technologies.",
-    images: ["/memoji-avatar-1.png"],
-    creator: "@johngerges", // If applicable
+    title: "John Gerges | Front-End Developer",
+    description: siteDescription,
+    images: ["/twitter-image"],
   },
   robots: {
     index: true,
@@ -41,16 +56,38 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-site-verification-code", // Add if you have one
+  icons: {
+    icon: "/icon.ico",
   },
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: authorName,
+    url: siteUrl,
+    jobTitle: "Front-End Developer",
+    description: siteDescription,
+    sameAs: sameAsProfiles,
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+      "Framer Motion",
+      "GSAP",
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
-   
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="bg-gray-900 text-white antialiased font-sans">
         {children}

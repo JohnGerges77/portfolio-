@@ -159,7 +159,7 @@ export const HeroSection = () => {
 
       <div className="">
         <div className="flex flex-col items-center">
-          <Image src={ImageIcon} alt="img" width={100} height={100} />
+          <Image src={ImageIcon} alt="John Gerges profile illustration" width={100} height={100} />
           <div className="bg-gray-950 border border-gray-800 px-4 rounded-3xl py-1.5 inline-flex items-center gap-2">
             <div className="bg-green-500 size-2.5 rounded-full relative">
               <div className="bg-green-500 inset-0 rounded-full absolute animate-ping-large"></div>
@@ -177,8 +177,8 @@ export const HeroSection = () => {
             Front-End Developer
           </h2>
           <p className="text-center my-4 text-white/60 md:text-lg">
-            I specialize in design into functional, high-performing web
-            applications. Let’s discuss your next project
+            I turn ideas into functional, high-performing web applications.
+            Let&apos;s discuss your next project.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
@@ -193,7 +193,7 @@ export const HeroSection = () => {
             href="#contact"
             className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-2xl bg-white text-gray-900 cursor-pointer"
           >
-            <span className="font-semibold">Let’s Connect</span>
+            <span className="font-semibold">Let&apos;s Connect</span>
             <ArrowUpRightIcon className="size-4" />
           </Link>
         </div>
