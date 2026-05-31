@@ -61,7 +61,7 @@ const Skills = [
     top: "50%",
   },
   {
-    title: "SCSS",
+    title: "TypeScript",
     left: "60%",
     top: "45%",
   },
@@ -71,6 +71,7 @@ const Skills = [
     left: "40%",
     top: "47%",
   },
+
   {
     title: "Bootstrap",
     left: "55%",

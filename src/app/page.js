@@ -3,9 +3,9 @@ import { ContactSection } from "../sections/Contact";
 import { Footer } from "../sections/Footer";
 import { Header } from "../sections/Header";
 import { HeroSection } from "../sections/Hero";
+import { ExperienceSection } from "../sections/Experience";
 import { ProjectsSection } from "../sections/Projects";
 import { TapeSection } from "../sections/Tape";
-import AboutSection from "../sections/About";
 
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
     <div>
  <Header />
  <HeroSection />
- <AboutSection />
+ <ExperienceSection />
  <ProjectsSection />
  <TapeSection />
  <SkillSection />

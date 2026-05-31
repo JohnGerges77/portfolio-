@@ -88,7 +88,19 @@ const portfolioProjects = [
      
     image: FifthProject,
   },
-  
+    {
+    company: "Gsap Animation",
+    year: "2024",
+    title: "Arcane",
+    results: [
+      { title: "GSAP for smooth, high-performance animations." },
+      { title: " Tailwind for a responsive and modern design." },
+      { title: "visually rich interface." },
+    ],
+    link: "https://arcane-chi.vercel.app/",
+         repo: "https://github.com/JohnGerges77/Arcane",
+    image: ThirdProject,
+  },
   {
     company: "hotel management system",
     year: "2024",
@@ -104,19 +116,7 @@ const portfolioProjects = [
   },
    
 
-  {
-    company: "Gsap Animation",
-    year: "2024",
-    title: "Arcane",
-    results: [
-      { title: "GSAP for smooth, high-performance animations." },
-      { title: " Tailwind for a responsive and modern design." },
-      { title: "visually rich interface." },
-    ],
-    link: "https://arcane-chi.vercel.app/",
-         repo: "https://github.com/JohnGerges77/Arcane",
-    image: ThirdProject,
-  },
+
 
   {
     company: "Games E-commerce",
