@@ -182,7 +182,7 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-          <a href="/John_Gerges_Frontend_Developer_CV.pdf" download>
+          <a href="/John Gerges Frontend_Developer.pdf" download>
             <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-2xl cursor-pointer">
               <span className="font-semibold">Download My CV</span>
               <ArrowDown className="size-4 animate-bounce" />
