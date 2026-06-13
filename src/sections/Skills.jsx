@@ -72,11 +72,11 @@ const Skills = [
     top: "47%",
   },
 
-  {
-    title: "Bootstrap",
-    left: "55%",
-    top: "15%",
-  },
+  // {
+  //   title: "Bootstrap",
+  //   left: "55%",
+  //   top: "15%",
+  // },
   {
     title: "Tailwind",
     left: "35%",
@@ -118,11 +118,11 @@ const Skills = [
     top: "72%",
   },
 
-  {
-    title: "Clerk",
-    left: "66%",
-    top: "76%",
-  },
+  // {
+  //   title: "Clerk",
+  //   left: "66%",
+  //   top: "76%",
+  // },
   {
     title: "Git",
     left: "12%",

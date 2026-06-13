@@ -183,18 +183,18 @@ export const HeroSection = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
           <a href="/John Gerges Frontend_Developer.pdf" download>
-            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-2xl cursor-pointer">
+            <button className="group inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-2xl cursor-pointer bg-white/[0.03] transition duration-300 ease-out hover:-translate-y-1 hover:border-emerald-300/50 hover:bg-white/[0.08] hover:shadow-[0_0_28px_rgba(52,211,153,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950">
               <span className="font-semibold">Download My CV</span>
-              <ArrowDown className="size-4 animate-bounce" />
+              <ArrowDown className="size-4 animate-bounce transition duration-300 group-hover:translate-y-1 group-hover:text-emerald-300" />
             </button>
           </a>
 
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-2xl bg-white text-gray-900 cursor-pointer"
+            className="group inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-2xl bg-white text-gray-900 cursor-pointer transition duration-300 ease-out hover:-translate-y-1 hover:border-sky-300/60 hover:bg-emerald-300 hover:shadow-[0_0_32px_rgba(56,189,248,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
           >
             <span className="font-semibold">Let&apos;s Connect</span>
-            <ArrowUpRightIcon className="size-4" />
+            <ArrowUpRightIcon className="size-4 transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:rotate-12" />
           </Link>
         </div>
         <div className="flex flex-col justify-center items-center mt-5">
