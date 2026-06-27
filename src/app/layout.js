@@ -1,4 +1,6 @@
 import "./globals.css";
+import "lenis/dist/lenis.css";
+import SmoothScroll from "../components/SmoothScroll";
 import {
   authorName,
   sameAsProfiles,
@@ -90,7 +92,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="bg-gray-900 text-white antialiased font-sans">
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
